@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "DarkerGrotesque";
+    src: url("./css/fonts/darkergrotesque-regular-webfont.woff") format("woff");
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'DarkerGrotesque';
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    background: #333;
+    padding: 0 80px;
+
+}
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    margin: 10px 0;
+    border-radius: 50%;
+    background-color: #ded6fb;
+}
+
+.header-logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 40px;
+    text-shadow: 0 0 15px #b29fff;
+}
+
+.menu-list {
+    display: flex;
+    font-size: 17px;
+}
+
+.menu-list-item {
+    display: block;
+    width: 100px;
+}
+
+main {
+    padding: 30px 80px;
+    background-color: #707070;
+    flex: 1;
+}
+
+.page-title {
+    font-size: 45px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 2px rgb(202 228 225 / 92%), 
+    0 0 10px rgb(202 228 225 / 34%), 
+    0 0 4px #b29fff, 
+    0 0 7px #b29fff, 
+    0 0 11px #b29fff, 
+    0 0 16px #b29fff;
+}
+
+.page-content {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.columns {
+    width: 450px;
+}
+
+.column-title {
+    font-size: 20px;
+}
+
+.img-column {
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+.column-img {
+    width: 250px;
+    border-radius: 20px;
+    background-color: #ded6fb;
+    /* transform: translateX(100%); */
+    transition: 0.6s all ease-in-out;
+}
+
+.slick-prev {
+    left: -40px !important;
+}
+
+.slick-next {
+    right: -40px !important;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 35px !important;
+    color: #ded6fb !important;
+}
+
+.slick-dots li button:before {
+    color: #ded6fb !important;
+}
+
+footer {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    padding: 0 80px;
+
+    background: #333;
+}
