@@ -1,0 +1,81 @@
+/* BUTTONS */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.button {
+    background-color: var(--purple-300);
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    line-height: 19px;
+    border-radius: 25px;
+    border: 2px solid var(--grey-100);
+    padding: 10px 20px;
+    margin: 0 15px;
+    transition: background-color 0.5s;
+}
+
+.button:hover {
+    background-color: var(--purple-500);
+}
+
+.button-active {
+    background-color: var(--purple-200);
+    color: var(--grey-700);
+}
+
+.button-active:hover {
+    background-color: var(--purple-200);
+}
+
+
+/* SPACER */
+.spacer {
+    margin: 0 37px;
+    height: 2px;
+    background-color: var(--grey-100);
+    border: 0;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+
+/* DOTS  */
+.dot {
+    background: var(--grey-300);
+    border: solid 2px var(--grey-500);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
+
+.dot-full {
+    background: var(--purple-300);
+}
+
+.dot-half-full {
+    background: linear-gradient( 90deg, var(--purple-300), var(--purple-300) 49%, var(--purple-300) 49%, var(--grey-300) 51%, var(--grey-300) 51% );
+}
+
+
+/* SLICK  */
+.slick-prev {
+    left: -40px !important;
+}
+
+.slick-next {
+    right: -40px !important;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 35px !important;
+    color: #ded6fb !important;
+}
+
+.slick-dots li button:before {
+    color: #ded6fb !important;
+}
