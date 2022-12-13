@@ -19,6 +19,16 @@
     src: url("./fonts/roboto.woff") format("woff");
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: url("./fonts/poppins.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PoppinsExtra";
+    src: url("./fonts/poppins-extrabold.woff") format("woff");
+}
+
 
 /* STYLES */
 :root {
@@ -120,9 +130,9 @@ main {
 /* BIG BANNER  */
 .page-title {
     font-family: 'AbrilFatface' !important;
-    font-size: 45px;
+    font-size: 50px;
     letter-spacing: 2px;
-    font-weight: 400;
+    /* font-weight: 400; */
     color: #fff;
     text-align: center;
     margin: 10px 0;
@@ -138,16 +148,29 @@ main {
 }
 
 .img-container {
+    position: relative;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
 
 .img-content {
+    position: relative;
     width: 325px;
+    height: 325px;
     border-radius: 50%;
     background-color: var(--purple-200);
     box-shadow: 0px 0px 28px var(--grey-800);
+
+    background-image: url("./resources/header-logo.png");
+    background-size: 340px;
+    background-position-x: center;
+
+    transition: background-image 1s ease-in-out;
+}
+
+.img-content:hover {
+    background-image: url("./resources/Carolina_Campos_photo.png");
 }
 
 /* HOME PAGE CONTENT  */
@@ -155,6 +178,7 @@ main {
     display: flex !important;
     justify-content: center;
     align-items: flex-start;
+    margin: 50px 0;
 }
 
 .columns {
@@ -162,6 +186,7 @@ main {
 }
 
 .column-title {
+    font-family: 'AbrilFatface' !important;
     font-size: 20px;
     margin: 0;
 }
@@ -179,7 +204,7 @@ main {
     display: block;
 }
 
-.container-title {
+/* .container-title {
     margin: 15px 0;
 }
 
@@ -201,17 +226,11 @@ main {
 
 .item-title {
     margin: 0;
-}
+} */
 
-.item-img {
-    width: auto;
-    max-height: 30px;
-    margin-right: 10px;
-}
-
-.item-dots-container {
+/* .item-dots-container {
     display: flex;
-}
+} */
 
 .vertical-buttons {
     flex-flow: column;
@@ -223,6 +242,24 @@ main {
     margin: 15px;
     text-align: center;
     cursor: pointer;
+}
+
+.section-title {
+    font-family: 'AbrilFatface' !important;
+    font-size: 40px;
+    text-align: center;
+}
+
+.itens-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.item-img {
+    width: auto;
+    max-height: 60px;
+    margin: 0 25px;
 }
 
 
