@@ -34,12 +34,10 @@
 
 /* SPACER */
 .spacer {
-    margin: 0 37px;
     height: 2px;
     background-color: var(--grey-100);
     border: 0;
     border-radius: 15px;
-    margin-bottom: 50px;
 }
 
 
