@@ -119,6 +119,67 @@ header .header-item:last-child {
     margin-left: auto;
 }
 
+.header-btn-mobile {
+    display: none;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.header-btn-mobile-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 3px;
+    background-color: white;
+    border-radius: 1.5px;
+    transform: translateX(-50%) translateY(-50%);
+    transition: background-color .15s ease-in-out;
+}
+
+.header-btn-mobile-icon::after, 
+.header-btn-mobile-icon::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 3px;
+    background-color: white;
+    border-radius: 1.5px;
+    transition: top .15s ease-in-out,transform .15s ease-in-out;
+}
+
+.header-btn-mobile-icon::after {
+    top: 8px
+}
+
+.header-btn-mobile-icon::before {
+    top: -8px
+}
+
+.header-btn-mobile.-open .header-btn-mobile-icon::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.header-btn-mobile.-open .header-btn-mobile-icon::after {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.header-btn-mobile.-open .header-btn-mobile-icon {
+    background-color: transparent;
+}
+
 .menu-list-item {
     display: block;
     width: 100px;
@@ -142,6 +203,31 @@ main {
     background: linear-gradient(160deg, rgba(40,40,40,1) 0%, rgba(58,58,58,1) 15%, rgba(73,73,73,1) 50%, rgba(132,121,175,1) 85%, rgba(178,159,255,1) 100%);
     background-attachment: fixed;
     flex: 1;
+}
+
+@media only screen and (max-width: 837px) {
+    header {
+        flex-wrap: wrap;
+        padding: 0 30px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+    
+    .header-nav.-open {
+        display: flex;
+        justify-content: center;
+        flex-basis: 100%;
+    }
+
+    .header-btn-mobile {
+        display: block;
+    }
+
+    main {
+        padding: 30px;
+    }
 }
 
 /* BIG BANNER  */
@@ -190,12 +276,18 @@ main {
     background-image: url("./resources/Carolina_Campos_photo.png");
 }
 
+@media only screen and (max-width: 837px) {
+    .big-banner .button {
+        margin: 0 10px 0 0;
+    }
+}
+
 /* HOME PAGE CONTENT  */
 .page-content {
     display: flex !important;
     justify-content: center;
     align-items: flex-start;
-    margin: 50px 0;
+    margin: 50px auto;
 }
 
 .columns {
@@ -251,7 +343,7 @@ main {
 
 .vertical-buttons {
     flex-flow: column;
-    width: 50%;
+    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -270,13 +362,22 @@ main {
 .itens-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 25px;
+    width: 58%;
 }
 
 .item-img {
     width: auto;
     max-height: 60px;
-    margin: 0 25px;
+    margin: 25px;
+    /* flex: 1 1 60px; */
+}
+
+@media only screen and (max-width: 837px) {
+    .itens-container {
+        width: 80%;
+    }
 }
 
 
@@ -295,6 +396,7 @@ footer {
 .footer-container {
     display: flex;
     flex-flow: column;
+    align-items: center;
 }
 
 .footer-img-container {
@@ -317,4 +419,10 @@ footer {
     width: 32px;
     height: auto;
     margin: 0 10px;
+}
+
+@media only screen and (max-width: 837px) {
+    footer {
+        padding: 0 30px;
+    }
 }
