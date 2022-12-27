@@ -6,7 +6,7 @@
 }
 
 .button {
-    background-color: var(--purple-300);
+    background-color: var(--blue-700);
     text-decoration: none;
     color: white;
     font-weight: 600;
@@ -19,16 +19,22 @@
 }
 
 .button:hover {
-    background-color: var(--purple-500);
+    background-color: var(--blue-600);
 }
 
 .button-active {
-    background-color: var(--purple-200);
+    background-color: var(--blue-200);
     color: var(--grey-700);
 }
 
 .button-active:hover {
-    background-color: var(--purple-200);
+    background-color: var(--blue-200);
+}
+
+@media only screen and (max-width: 837px) {
+    .button {
+        padding: 8px 14px;
+    }
 }
 
 
@@ -52,11 +58,11 @@
 }
 
 .dot-full {
-    background: var(--purple-300);
+    background: var(--blue-300);
 }
 
 .dot-half-full {
-    background: linear-gradient( 90deg, var(--purple-300), var(--purple-300) 49%, var(--purple-300) 49%, var(--grey-300) 51%, var(--grey-300) 51% );
+    background: linear-gradient( 90deg, var(--blue-300), var(--blue-300) 49%, var(--blue-300) 49%, var(--grey-300) 51%, var(--grey-300) 51% );
 }
 
 
